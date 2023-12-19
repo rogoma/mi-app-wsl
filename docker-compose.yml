@@ -1,5 +1,5 @@
 services:
-    mi-app:
+    mi-app-wsl:
         build:
             context: ./vendor/laravel/sail/runtimes/8.2
             dockerfile: Dockerfile
@@ -29,7 +29,7 @@ services:
             # - selenium
     pgsql:
         image: postgres:12.4
-        container_name: mi-app-pgsql12
+        container_name: mi-app-wsl-pgsql12
         restart: unless-stopped
         # expose:
         #     - 5432
@@ -40,7 +40,7 @@ services:
         environment:
             POSTGRES_USER: ${DB_USERNAME:-postgres}
             POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
-            POSTGRES_DB: ${DB_DATABASE:-mi-app}
+            POSTGRES_DB: ${DB_DATABASE:-mi-app-wsl}
         networks:
             - sail
     # redis:
