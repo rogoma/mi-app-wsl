@@ -27,7 +27,7 @@ class PizzaFactory extends Factory
 
         $toppings =[];
 
-        for ($i = 1; $ < rand(1,4); $i++){
+        for ($i = 1; $i <= rand(1, 4); $i++){
             $toppings [] = Arr::random($toppingChoices);
         } 
 
@@ -39,7 +39,7 @@ class PizzaFactory extends Factory
             'size' => Arr::random(['Small', 'Medium','Large', 'Extra-Large']),
             'crust' => Arr::random(['Normal', 'Thin','Garlic']),
             'toppings' => $toppings,
-            'status' => Arr::random(['Ordered', 'Prepping','Baking', 'Checking','Ready']),
+            'status' => Arr::random(['Ordered', 'Prepping','Baking', 'Checking','Ready'])
         ];
     }
 }

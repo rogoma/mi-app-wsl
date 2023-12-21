@@ -17,8 +17,8 @@ class Pizza extends Model
         'toppings' => 'array',        
     ];
 
-    public funciton User(): BelongsTo
+    public function User(): BelongsTo
     {
-        return $this->belongsTo(related: User::class);
+        return $this->belongsTo(User::class);
     }
 }
