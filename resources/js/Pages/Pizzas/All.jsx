@@ -1,4 +1,4 @@
-export default function All({auth, pizzas}){
+export default function All({}){
     return (
         <h1>Pizzas!</h1>
     );

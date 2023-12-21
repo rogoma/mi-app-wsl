@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Arr;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Pizza>
@@ -31,7 +32,7 @@ class PizzaFactory extends Factory
             $toppings [] = Arr::random($toppingChoices);
         } 
 
-        $toppings = array_unique($toppings)
+        $toppings = array_unique($toppings);
 
         return [
             'id' => rand(1111,99999),
